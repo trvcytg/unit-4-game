@@ -38,6 +38,7 @@ function startGame() {
 function resetGame() {
   // sets score back to zero
   currentScore = 0;
+  console.log(`---NEW GAME STARTED---`);
   //   runs startGame function again to start a new game
   startGame();
 }
