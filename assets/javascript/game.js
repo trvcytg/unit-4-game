@@ -24,6 +24,16 @@ function startGame() {
   // print proper values to let user know their score and the score they need to reach
   $("#goal").text(`${goalValue}`);
   $("#curScore").text(currentScore);
+  if (
+    Number.isInteger(rubyValue / 2) === true &&
+    Number.isInteger(sapphireValue / 2) === true &&
+    Number.isInteger(emeraldValue / 2) === true &&
+    Number.isInteger(topazValue / 2) === true &&
+    Number.isInteger(goalValue / 2) === true
+  ) {
+    console.log(`No possible win for this instance.`);
+  } else {
+  }
 }
 function resetGame() {
   // sets score back to zero
