@@ -9,6 +9,7 @@ let lossTally = 0;
 let currentScore = 0;
 
 // Define funtions
+
 function startGame() {
   //   set random values
   goalValue = Math.floor(Math.random() * 100 + 20);
