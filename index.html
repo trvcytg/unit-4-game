@@ -14,7 +14,79 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./assets/javascript/game.js"></script>
 
-    <title>JQuery Game</title>
+    <title>Crystal Collector</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1 class="text-center" id="cryCol">Crystal Collector!</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-8 offset-md-2" id="instructText">
+        <p>You will be given a random number at the start of the game.</p>
+        <p>
+          There are four crystals below. By clicking on a crystal you will add a
+          specific amount of points to your total score.
+        </p>
+        <p>
+          You win the game by matching your total score to a randomly chosen
+          number, you lose if your total score goes above the randomly chosen
+          number.
+        </p>
+        <p>
+          The value of each crystal is hidden, pay attention to how your score
+          reacts to each crystal!
+        </p>
+        <p>
+          Any time a game begins, the value of each crystal will be reassigned
+          to a new random value!
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5 offset-md-2 text-center" id="goal">
+        Goal
+      </div>
+      <div class="col-md-3" id="wLCount">
+        <p>Wins: <span id="wins">0</span></p>
+        <p>Losses: <span id="losses">0</span></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 offset-md-2" id="ruby">
+        <img src="./assets/images/ruby.png" alt="Ruby" />
+      </div>
+      <div class="col-md-2" id="sapphire">
+        <img src="./assets/images/gem.png" alt="Sapphire" />
+      </div>
+      <div class="col-md-2" id="emerald">
+        <img src="./assets/images/emerald.png" alt="Emerald" />
+      </div>
+      <div class="col-md-2" id="topaz">
+        <img src="./assets/images/topaz.png" alt="Topaz" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 offset-md-3 text-center" id="score">
+        Total Score:
+      </div>
+      <div class="col-md-4 text-center" id="curScore">0</div>
+    </div>
+
+    <!-- Gem Icon Credit -->
+    <!-- <div>
+      Icons made by
+      <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+        >Freepik</a
+      >
+      from
+      <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+      is licensed by
+      <a
+        href="http://creativecommons.org/licenses/by/3.0/"
+        title="Creative Commons BY 3.0"
+        target="_blank"
+        >CC 3.0 BY</a
+      >
+    </div> -->
+  </body>
 </html>
