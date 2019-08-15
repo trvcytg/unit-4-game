@@ -29,7 +29,7 @@ function startGame() {
     Number.isInteger(sapphireValue / 2) === true &&
     Number.isInteger(emeraldValue / 2) === true &&
     Number.isInteger(topazValue / 2) === true &&
-    Number.isInteger(goalValue / 2) === true
+    Number.isInteger(goalValue / 2) === false
   ) {
     console.log(`No possible win for this instance.`);
   } else {
