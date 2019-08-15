@@ -20,115 +20,48 @@ function startGame() {
   console.log(
     `goal: ${goalValue}, ruby: ${rubyValue}, sapphire: ${sapphireValue}, emerald: ${emeraldValue}, topaz: ${topazValue}`
   );
-  $("#goal").html(`${goalValue}`);
-  $("#curScore").html(currentScore);
+  // print proper values to let user know their score and the score they need to reach
+  $("#goal").text(`${goalValue}`);
+  $("#curScore").text(currentScore);
 }
 function resetGame() {
+  // sets score back to zero
   currentScore = 0;
+  //   runs startGame function again to start a new game
   startGame();
 }
 function play(x) {
+  //   adds to and displays new player score
   currentScore += x;
   $("#curScore").text(currentScore);
-
+  // tests parameters for a win
   if (currentScore == goalValue) {
     winTally++;
     alert(`Good Work, Winner! Try for another win!`);
-    $("#wins").html(winTally);
+    $("#wins").text(winTally);
     resetGame();
+    // tests parameters for a loss
   } else if (currentScore > goalValue) {
     lossTally++;
     alert(`Bummer, you lost! Give it another shot!`);
-    $("#losses").html(lossTally);
+    $("#losses").text(lossTally);
     resetGame();
+    // allows game to continue if win/loss parameters are not met
   } else {
   }
 }
 
+// Gameplay functionality
 startGame();
-
-// Consider creating function for this
 $("#ruby").click(function() {
   play(rubyValue);
 });
-// $("#ruby").click(function() {
-//   currentScore += rubyValue;
-//   $("#curScore").text(currentScore);
-
-//   if (currentScore == goalValue) {
-//     winTally++;
-//     alert(`Good Work, Winner! Try for another win!`);
-//     $("#wins").html(winTally);
-//     resetGame();
-//   } else if (currentScore > goalValue) {
-//     lossTally++;
-//     alert(`Bummer, you lost! Give it another shot!`);
-//     $("#losses").html(lossTally);
-//     resetGame();
-//   } else {
-//   }
-// });
 $("#sapphire").click(function() {
-  currentScore += sapphireValue;
-  $("#curScore").text(currentScore);
-
-  if (currentScore == goalValue) {
-    winTally++;
-    alert(`Good Work, Winner! Try for another win!`);
-    $("#wins").html(winTally);
-    resetGame();
-  } else if (currentScore > goalValue) {
-    lossTally++;
-    alert(`Bummer, you lost! Give it another shot!`);
-    $("#losses").html(lossTally);
-    resetGame();
-  } else {
-  }
+  play(sapphireValue);
 });
 $("#emerald").click(function() {
-  currentScore += emeraldValue;
-  $("#curScore").text(currentScore);
-
-  if (currentScore == goalValue) {
-    winTally++;
-    alert(`Good Work, Winner! Try for another win!`);
-    $("#wins").html(winTally);
-    resetGame();
-  } else if (currentScore > goalValue) {
-    lossTally++;
-    alert(`Bummer, you lost! Give it another shot!`);
-    $("#losses").html(lossTally);
-    resetGame();
-  } else {
-  }
+  play(emeraldValue);
 });
 $("#topaz").click(function() {
-  currentScore += topazValue;
-  $("#curScore").text(currentScore);
-
-  if (currentScore == goalValue) {
-    winTally++;
-    alert(`Good Work, Winner! Try for another win!`);
-    $("#wins").html(winTally);
-    resetGame();
-  } else if (currentScore > goalValue) {
-    lossTally++;
-    alert(`Bummer, you lost! Give it another shot!`);
-    $("#losses").html(lossTally);
-    resetGame();
-  } else {
-  }
+  play(topazValue);
 });
-
-if (currentScore == goalValue) {
-  winTally++;
-  alert(`Good Work, Winner! Try for another win!`);
-  $("#wins").html(winTally);
-  resetGame();
-} else if (currentScore > goalValue) {
-  lossTally++;
-  alert(`Bummer, you lost! Give it another shot!`);
-  $("#losses").html(lossTally);
-  resetGame();
-} else {
-}
