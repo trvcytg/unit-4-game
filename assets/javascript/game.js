@@ -55,7 +55,7 @@ function play(x) {
     // tests parameters for a loss
   } else if (currentScore > goalValue) {
     lossTally++;
-    alert(`Bummer, you lost! Give it another shot!`);
+    alert(`Bummer, you loser! Try again you little bitch!`);
     $("#losses").text(lossTally);
     resetGame();
     // allows game to continue if win/loss parameters are not met
