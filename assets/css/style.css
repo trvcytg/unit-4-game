@@ -55,11 +55,12 @@ p::first-letter {
   font-size: 4em;
 }
 #score {
-  font-size: 2em;
-  line-height: 1em;
+  font-size: 3em;
+  line-height: 1.75em;
   padding-top: 1%;
 }
 img {
-  width: 100%;
+  width: 75%;
   height: auto;
+  padding: 26% 0 26% 0;
 }
