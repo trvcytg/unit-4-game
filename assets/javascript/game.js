@@ -4,6 +4,7 @@ let sapphireValue;
 let emeraldValue;
 let topazValue;
 let goalValue;
+let unwinnable;
 let winTally = 0;
 let lossTally = 0;
 let currentScore = 0;
@@ -32,6 +33,7 @@ function startGame() {
     Number.isInteger(goalValue / 2) === false
   ) {
     console.log(`No possible win for this instance.`);
+    unwinnable = 1;
   } else {
   }
 }
@@ -40,6 +42,7 @@ function resetGame() {
   currentScore = 0;
   console.log(`---NEW GAME STARTED---`);
   //   runs startGame function again to start a new game
+  unwinnable = 0;
   startGame();
 }
 function play(x) {
@@ -54,10 +57,19 @@ function play(x) {
     resetGame();
     // tests parameters for a loss
   } else if (currentScore > goalValue) {
-    lossTally++;
-    alert(`Bummer, you loser! Try again you little bitch!`);
-    $("#losses").text(lossTally);
-    resetGame();
+    if (unwinnable === 1) {
+      lossTally++;
+      alert(
+        `Haha! You never stood a chance! All the gems were even, there was no way you could possibly win!`
+      );
+      $("#losses").text(lossTally);
+      resetGame();
+    } else {
+      lossTally++;
+      alert(`Bummer, you loser! Try again you little bitch!`);
+      $("#losses").text(lossTally);
+      resetGame();
+    }
     // allows game to continue if win/loss parameters are not met
   } else {
   }
