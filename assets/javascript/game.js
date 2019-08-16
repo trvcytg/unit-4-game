@@ -66,7 +66,7 @@ function play(x) {
       resetGame();
     } else {
       lossTally++;
-      alert(`Bummer, you loser! Try again you little bitch!`);
+      alert(`Bummer, you loser! Try again you little b****!`);
       $("#losses").text(lossTally);
       resetGame();
     }
