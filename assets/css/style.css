@@ -4,13 +4,16 @@ body {
   font-family: Georgia, "Times New Roman", Times, sans-serif;
 }
 #cryCol {
-  background-color: #fff2d9;
-  color: #191919;
+  background-color: #ff334d;
+  color: #000000;
   padding-bottom: 1%;
 }
 #instructText {
   background-color: #333333;
   color: #808080;
+}
+#mobileOnly {
+  display: none;
 }
 p::first-letter {
   font-weight: bold;
@@ -63,4 +66,9 @@ img {
   width: 75%;
   height: auto;
   padding: 26% 0 26% 0;
+}
+@media only screen and (max-width: 415px) {
+  #mobileOnly {
+    display: initial;
+  }
 }
